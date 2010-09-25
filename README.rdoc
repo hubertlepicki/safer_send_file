@@ -1,0 +1,27 @@
+About
+=====
+
+This little gem adds "safer_send_file" method, that wraps Rails' "send_file" and checks if file being sent is in one of white-listed directories. This is to prevent Rails application from sending /etc/passwd or any other sensitive data.
+
+Installation
+============
+
+Edit your Gemfile, and add:
+
+    gem "safer_send_file", "0.0.1"
+
+and run:
+    
+    $ bundle install
+
+Configuration
+=============
+
+Create file #{Rails.root}/config/initializers/safe_send_file and specify allowed directories. Default is not to allow serving any files!
+
+Example initializer file:
+
+    SaferSendFile.allowed_directories = [
+      File.join(Rails.root, "uploads")
+    ]
+
