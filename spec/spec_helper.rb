@@ -1,4 +1,4 @@
-require File.join(File.dirname(__FILE__), "..", "lib", "safer_send_file")
+require 'safer_send_file'
 
 RSpec.configure do |config|
   # == Mock Framework

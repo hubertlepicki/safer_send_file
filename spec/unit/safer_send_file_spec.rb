@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 class MyClass
-  include SaferSendFile
+  include SaferSendFile::Streaming
   def perform_send(path)
     safer_send_file(path)
   end
