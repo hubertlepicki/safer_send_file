@@ -22,6 +22,10 @@ Example initializer file:
       File.join(Rails.root, "uploads")
     ]
 
+= Usage
+
+Replace "send_file" with "safer_send_file" in your controllers. Sleep better.
+
 = License
 
 MIT, see MIT_LICENSE for details.
